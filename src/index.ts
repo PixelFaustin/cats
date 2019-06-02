@@ -25,11 +25,13 @@ iohook.on("keydown", (evt: KeydownEvent) => {
   const key: string = keycode(evt.rawcode);
 
   if (key === "numpad 4") {
+    robot.keyTap("backspace");
     isKnockingOut = true;
     knockout().then(() => {
       isKnockingOut = false;
     });
   } else if (key === "numpad 5") {
+    robot.keyTap("backspace");
     pickpocket();
   }
 });

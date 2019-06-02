@@ -20,12 +20,14 @@ let isKnockingOut = false;
 iohook_1.default.on("keydown", (evt) => {
     const key = keycode_1.default(evt.rawcode);
     if (key === "numpad 4") {
+        robotjs_1.default.keyTap("backspace");
         isKnockingOut = true;
         knockout().then(() => {
             isKnockingOut = false;
         });
     }
     else if (key === "numpad 5") {
+        robotjs_1.default.keyTap("backspace");
         pickpocket();
     }
 });
