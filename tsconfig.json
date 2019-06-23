@@ -9,7 +9,7 @@
     "outDir": "dist",
     "baseUrl": ".",
     "paths": {
-      "*": ["node_modules/*", "src/types/*"]
+      "*": ["no5lde_modules/*", "src/types/*"]
     }
   },
   "include": ["src/**/*"]

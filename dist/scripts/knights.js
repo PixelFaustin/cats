@@ -31,20 +31,7 @@ iohook_1.default.on("keydown", (evt) => {
 function loop() {
     return __awaiter(this, void 0, void 0, function* () {
         if (toggle) {
-            if (count === 125) {
-                const original = robotjs_1.default.getMousePos();
-                robotjs_1.default.moveMouse(pouchSpot.x, pouchSpot.y);
-                yield wait_1.waitNormal(700, 100);
-                robotjs_1.default.mouseClick("left");
-                yield wait_1.waitNormal(30, 10);
-                count = 0;
-                yield wait_1.waitNormal(60, 20);
-                robotjs_1.default.moveMouse(original.x, original.y);
-            }
-            else {
-                count++;
-                robotjs_1.default.mouseClick("left");
-            }
+            robotjs_1.default.mouseClick("left");
         }
         yield wait_1.wait(100);
         loop();

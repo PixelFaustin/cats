@@ -34,19 +34,7 @@ iohook.on("keydown", (evt: KeydownEvent) => {
 
 async function loop() {
   if (toggle) {
-    if (count === 125) {
-      const original: Vec2 = robot.getMousePos();
-      robot.moveMouse(pouchSpot.x, pouchSpot.y);
-      await waitNormal(700, 100);
-      robot.mouseClick("left");
-      await waitNormal(30, 10);
-      count = 0;
-      await waitNormal(60, 20);
-      robot.moveMouse(original.x, original.y);
-    } else {
-      count++;
-      robot.mouseClick("left");
-    }
+    robot.mouseClick("left");
   }
 
   await wait(100);
